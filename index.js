@@ -6,7 +6,7 @@ discordElement.addEventListener("click", () => {
 
     const popup = document.createElement("span");
     popup.classList.add("popup");
-    popup.innerText = navigator.clipboard.writeText ? "Copied to clipboard!" : discordElement.attributes.getNamedItem("data-tag").value;
+    popup.innerText = navigator.clipboard ? "Copied to clipboard!" : discordElement.attributes.getNamedItem("data-tag").value;
     popup.style.left = discordElement.getBoundingClientRect().left - discordElement.getBoundingClientRect().width + "px";
     popup.style.top = discordElement.getBoundingClientRect().top - discordElement.getBoundingClientRect().height - 50 + "px";
     document.body.appendChild(popup);
